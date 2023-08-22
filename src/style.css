@@ -1,0 +1,315 @@
+@font-face{
+    font-family: 'eva';
+    src:url('fonts/EVA35Regular.otf')
+}
+
+
+
+
+
+/*--------------*/
+
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    background: black;
+   
+    
+
+    -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;-webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow-x: hidden; 
+
+
+    /*variable css*/
+    --main-color:#2933FF;
+
+   
+}
+
+/*position fixed marche apparament mais il faut changer la positio absolute qui est fixé sur l'élément */
+.htmlScreen {
+    width: 1024px;
+    height: 670px;
+    border: none;
+   position: fixed !important;
+   
+}
+
+.htmlIframe{
+
+    width: 1024px;
+    height: 670px;
+    border: none;
+   position: fixed !important;
+
+}
+
+canvas + div{
+    touch-action: none;
+    
+}
+
+canvas + div div{
+    z-index:3;
+   
+}
+
+
+
+
+
+.scrollFix{
+    top:0;
+    position: absolute;
+    
+    
+}
+
+
+
+
+.section{
+
+    height: 100vh;
+    width: 100vw;
+    padding-left: 2vw;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    top: 0;
+    
+
+}
+
+.s1{
+    background-color: blueviolet;
+}
+
+/* 
+centrer les sections
+
+.Scontainer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+} */
+
+
+.number{
+    color:black;
+    font-family: 'eva',sans-serif;
+    font-size: 64px;
+    border-bottom: #2933FF solid 5px;
+    animation: border_anim 3s linear forwards;
+
+}
+
+
+
+
+.number1{
+    color:black;
+    font-family: 'eva',sans-serif;
+    font-size: 64px;
+    border-bottom: #650E8C solid 5px;
+    animation: border_anim 4s linear forwards;
+
+}
+.number2{
+    color:black;
+    font-family: 'eva',sans-serif;
+    font-size: 64px;
+    border-bottom: #DB0A0A solid 5px;
+
+}
+.number3{
+    color:black;
+    font-family: 'eva',sans-serif;
+    font-size: 64px;
+    border-bottom: #05B035 solid 5px;
+
+}
+
+
+
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+
+h1{
+    color:black;
+    font-weight: bold;
+    font-family: 'eva',sans-serif;
+    font-size: 64px;
+}
+
+.btnS1{
+
+    text-align: center;
+    background-color: var(--main-color);
+    
+    width: 10vw;
+    height: 6vh ;
+    color: var(--main-color);
+    font-family: 'eva',sans-serif;
+    border: solid 3px;
+    border-radius: 30px 0px 30px 0px ;
+    border-color: #2933FF;
+    background-color: white;
+   
+    padding: 0.5em 2em ;
+} 
+
+.btnS1:hover{
+    background-color: var(--main-color);
+    color:white;
+}
+
+.subtitle{
+    color:black;
+    font-weight: bold;
+    font-family: eva;
+    font-size:30px;
+    margin-top: 0;
+
+}
+
+.text00{
+    font-family: 'eva',sans-serif;
+    font-size: 20px;
+}
+
+
+Copy code
+/* Pour les navigateurs Webkit (Safari et anciennes versions de Chrome) */
+/* Changer la couleur de la scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: yellow; /* Couleur de la partie mobile de la scrollbar */
+}
+
+/* Pour les navigateurs basés sur Blink (y compris les versions récentes de Chrome et Edge) */
+/* Changer la couleur de la scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: yellow; /* Couleur de la partie mobile de la scrollbar */
+}
+
+
+
+/*ui*/
+
+.level02Back{
+    background-color: white;
+    width: 15vw;
+    height: 15vh;
+    overflow: auto;
+   
+}
+
+.level02Back :nth-child(1){
+    display: flex;
+    flex-direction: column;
+
+}
+
+h3{
+    text-align: center;
+}
+h3+div{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 +div div{
+
+    width: 5vw;
+    height: 5vh;
+    background-color: #650E8C;
+}
+
+.p1:hover{
+    background-color:#DB0A0A;
+}
+
+
+
+
+
+
+
+
+
+.icon-scroll,
+.icon-scroll::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-scroll {
+    width: 40px;
+    height: 70px;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    cursor: pointer;
+    bottom: 2rem;
+}
+
+.icon-scroll::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #000000;
+    margin-left: -4px;
+    top: 15px;
+    border-radius: 50%;
+    animation: 1.5s scroll cubic-bezier(0.65, -0.55, 0.25, 1.5) infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.5);
+    }
+}

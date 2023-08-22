@@ -1,0 +1,309 @@
+<PortalStage 
+      name="vitrine"
+      position={[-70.05, 6, -19.683]}
+      rotation={[0, -0.003, 0]}
+      
+      texture={"./textures/anime_art_style_a_water_based_pokemon_like_environ.jpg"}
+      active={active}
+        setActive={setActive}
+      >
+     
+
+      </PortalStage>
+
+      <PortalStage 
+      name="boutique"
+       position={[-62.037, 1.495, -18.529]}
+       rotation={[0, -0.242, 0]}
+      
+      texture={"./textures/anime_art_style_earth_from_space.jpg"}
+      active={active}
+        setActive={setActive}
+      >
+     
+
+      </PortalStage>
+
+      <PortalStage 
+      name="seo"
+       position={[-55.2, 1.247, -13.963]}
+       rotation={[0, -0.827, 0]}
+      
+      texture={"./textures/AdobeStock_226375061.jpeg"}
+      active={active}
+      setActive={setActive}
+      >
+     
+
+      </PortalStage>
+
+
+const PortalStage=({Children,texture,name,active,setActive,...props})=>{
+
+  const map = useTexture(texture)
+  console.log(active);
+  
+  
+  return(<group {...props}>
+
+    <RoundedBox args={[2,3,0.1]} onDoubleClick={()=>{ setActive(active===name?null:name)}}>
+      <MeshPortalMaterial  blend={ active === name ? 1 : 0}>
+        <ambientLight intensity={1}/>
+        <Environment preset="sunset"/>
+        {Children}
+        <mesh>
+          <sphereGeometry args={[5,64,64]}/>
+          <meshStandardMaterial map={map} side={THREE.BackSide}/>
+        </mesh>
+      </MeshPortalMaterial>
+
+    </RoundedBox>
+    
+  </group>)}
+
+
+
+  position={[10,2,-60]}
+
+
+  tp level 1
+
+  const [active, setActive] = useState(false);
+  
+ 
+ const NV1= useRef();
+
+
+ const basculerActivation = () => {
+  const newState = !active;
+  setActive(newState);
+  props.setActiveState(newState); // pass new state to the parent  
+  
+  mettre sa au dans le mesh en question 
+  onClick={basculerActivation}
+
+  ref={NV1}
+};
+
+// portail 
+<mesh
+        name="vitrine"
+        ref={meshRef}
+        castShadow
+        receiveShadow
+        geometry={nodes.portailVitrine.geometry}
+        material={nodes.portailVitrine.material}
+        position={[-70.05, 1.656, -19.683]}
+        rotation={[0, -0.003, 0]}
+        active={active}
+        setActive={setActive}
+        onDoubleClick={() => setActive(active===meshRef.current.name?null:meshRef.current.name)}
+        
+
+        
+        
+       
+      >
+        <MeshPortalMaterial ref={vitrineRef} >
+        <ambientLight intensity={1} />
+        <Environment preset="sunset" />
+        
+        <mesh>
+
+          <sphereGeometry args={[10, 64, 64]} />
+
+
+          <meshStandardMaterial map={map1} side={THREE.BackSide} />
+
+
+        </mesh>
+
+
+      </MeshPortalMaterial>
+
+
+      </mesh>
+
+<div classname="Moncanva">
+
+<div>
+  <div>
+    <div>div 3</div>
+  </div>
+</div>
+
+</div>
+
+
+
+tp sur ma photo
+
+if (activated) {
+
+    useFrame((state) => {
+
+
+      gsap.to(state.camera.position, {
+        x: 2,
+        z: -3,
+
+
+        duration: 1
+
+
+      })
+
+      gsap.to(state.camera.rotation, {
+        y: -1.6,
+        x: 0.1,
+
+
+
+        duration: 1
+      })
+
+
+
+
+
+    });
+
+  } else {
+    useFrame((state) => {
+
+      gsap.to(state.camera.position, {
+        x: 1,
+        y: 2,
+        z: 6,
+
+
+        duration: 2
+      })
+
+      gsap.to(state.camera.rotation, {
+        x: -0.3217505543966423,
+
+        y: 0.1568156853444008,
+        z: 0.05201097082184465,
+
+
+
+        duration: 2
+      })
+
+
+
+    })
+
+
+  }
+
+
+
+  // i frame 
+
+   <mesh
+      castShadow
+      receiveShadow
+      geometry={nodes.ecran_de_selection_lv3.geometry}
+      material={materials.metal}
+      position={[-143.393, 4.46, 1.605]}
+      onClick={() => buttonClick("ecranLV3", activated ? [2, 0] : [4, 0])} 
+    > 
+      <Html   wrapperClass="htmlScreen"  prepend  zIndexRange={zIndexRange}  width={2000} height={1000} transform occlude={NoBlending} distanceFactor={5} position={[-0.2,0,0]}  ref={planeRef } >
+          <div >
+          <Pages/>{/* <iframe src="https://bruno-simon.com/html/" /> */}
+          </div>
+      </Html>
+    
+
+    </mesh>
+
+
+    ------------------------------
+    lv1
+    img moi
+    onClick={() => buttonClick("mesh1")}
+     img
+    onClick={() => buttonClick("mesh2")}
+
+-------------------------------------------
+
+lv3 avec bouton a pars
+
+      <mesh
+        name="bouton_ON"
+        castShadow
+        receiveShadow
+        geometry={nodes.bouton_ON.geometry}
+        material={materials.level3}
+        position={[-131.56, 3.057, 1.582]}
+        onClick={() =>{{ console.log('ici'),buttonClick("ecranLV3", activated ? [2, 0]  : [4, 0])}  }}
+      />
+
+      <mesh
+        name="ecran_"
+        castShadow
+        receiveShadow
+        geometry={nodes.ecran_.geometry}
+        material={materials.blanc}
+        position={[-131.56, 4.107, 0.802]}
+      >
+
+        <Html wrapperClass="htmlScreen" prepend zIndexRange={zIndexRange} width={2000} height={1000} transform occlude={NoBlending} distanceFactor={5} position={[-0.2, 0, 0]} ref={planeRef} >
+          <div>
+            <Pages activerMachine={activerMachine} />
+          </div>
+        </Html>
+
+
+      </mesh>
+
+
+
+
+lv2 
+
+// const Blendclick = (objectId) => {
+
+
+  //   setActivated((prevActivated) => !prevActivated);
+
+  //   basculerActivation(objectId);
+    
+  //   console.log(blendref.current.blend)
+    
+
+  // }
+
+
+
+  // if (activated) {
+  //   console.log('ACTIVER');
+  // } else { console.log('DESACTIVER') }
+
+  // useEffect(() => {
+  //   if (blendref.current) {
+  //     blendref.current.blend = activated ? 1 : 0;
+      
+  //     console.log(activated ? "ACTIVER" : "DESACTIVER", blendref.current.blend);
+  //   }
+  // }, [activated]);
+
+
+
+
+   useFrame((state, delta) => {
+
+    const worldOpen = activated === objectid
+    easing.damp(blendref.current, "blend", worldOpen ? 1 : 0, 0.2, delta)
+
+  })
+
+   // const handleClick = () => {
+  //   //   setActive(active===meshRef.current.name?null:meshRef.current.name)
+  //   console.log(seoRef.current.blending)
+  //   seoRef.current.blending = 0
+  //   // console.log(active);
+  // };
+

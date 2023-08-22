@@ -1,0 +1,36 @@
+
+
+
+
+
+[X]---(priorité)---désignation
+
+
+
+[X]---(1)---système de scrolls
+[X]---(1)---generalisation et code pour les zoom de la caméra
+[X]---(1)--- code pour l'iframe 
+[]---(1)--- changer l'ui en fonction de l'objet 3D sélectionner
+[]---(2)---modifier le fade des sections  pour que le fond sois static
+[]---(2)---faire les robots
+////LEVEL00////
+
+[]---(3)---faire les textures baked
+
+
+////LEVEL01////
+
+[]---(3)---faire les textures baked
+[]---(1)---faire le systèmes de portail 
+[]---(2)--- design l'intérieur des portail 
+
+////LEVEL02////
+
+[]---(3)---faire les textures baked
+[]---(1)---faire l'ui de la balise html du level02
+[]---(1)---faire le code pour la machine à projets 
+
+
+////LEVEL03////
+
+[]---(3)---faire les textures baked
