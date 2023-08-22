@@ -56,48 +56,20 @@ export default function Level02({ basculerActivation }, props) {
 
 
   const [active, setActive] = useState(null)
-  const MaterialRef =useRef()
+  const MaterialRef = useRef()
 
-  
+
 
 
 
   return <>
 
-    {/* <RoundedBox
-    args={[2,3,0.1]}
-      position={[0, 1, 0]}
-      onClick={() => {console.log( "test",blendref.current.blend),Blendclick("test")}}
-      
-    >
-
-    
-      <MeshPortalMaterial
-        ref={blendref}
-        side={THREE.DoubleSide}
-
-      >
-
-        <ambientLight intensity={1} />
-        <Environment preset="sunset" />
-
-        <mesh>
-
-          <sphereGeometry args={[3, 64, 64]} />
-
-
-          <meshStandardMaterial map={map1} side={THREE.BackSide} />
-
-
-        </mesh>
-
-      </MeshPortalMaterial>
-    </RoundedBox> */}
 
 
 
 
-<ambientLight intensity={0.5} />
+
+    <ambientLight intensity={0.5} />
 
 
 
@@ -118,7 +90,6 @@ export default function Level02({ basculerActivation }, props) {
 
     </MonsterStage>
 
-   
 
 
 
@@ -127,7 +98,8 @@ export default function Level02({ basculerActivation }, props) {
 
 
 
-    {/* <group {...props} dispose={null} scale={0.25}>
+
+    <group {...props} dispose={null} scale={0.25}>
       <group position={[-76.998, 0.312, -19.713]}>
 
 
@@ -1524,8 +1496,7 @@ export default function Level02({ basculerActivation }, props) {
         position={[-82.48, 8.129, -19.957]}
         rotation={[-Math.PI / 2, 0, -1.593]}
       />
-    </group> */}
-
+    </group>
 
   </>
 }
@@ -1557,17 +1528,17 @@ const MonsterStage = ({ children, texture, name, color, active, setActive, ...pr
         <meshBasicMaterial color={color} toneMapped={false} />
       </Text>
 
-      <RoundedBox args={[2, 3, 0.1]} 
-      onDoubleClick={() => {
-        setActive(active === name ? null : name);
+      <RoundedBox args={[2, 3, 0.1]}
+        onDoubleClick={() => {
+          setActive(active === name ? null : name);
           console.log(name);
-      }}>
+        }}>
 
-        <MeshPortalMaterial 
-          side={THREE.DoubleSide} 
-        
+        <MeshPortalMaterial
+          side={THREE.DoubleSide}
+
           ref={portalMaterial}
-          
+
         >
 
           <ambientLight intensity={1} />

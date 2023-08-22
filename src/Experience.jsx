@@ -11,7 +11,7 @@ import portalFragmentShader from './shaders/portal/fragment.glsl'
 
 import Scene1 from "./components/Scene1.jsx"
 import Level01 from "./components/Level01.jsx"
-import Experience2 from "./components/Experience2"
+
 import Level02 from "./components/Modeletest2.jsx"
 import Level03 from "./components/Level03.jsx"
 import Level04 from "./components/Level04.jsx"
@@ -263,14 +263,14 @@ export default function Experience(props) {
         <Moon scale={0.25} /> */}
         <Level01 scale={0.25} basculerActivation={basculerActivation} />
         <Connector scale={0.25} />
-        {/* <Level02 scale={0.25}  basculerActivation={basculerActivation}  /> */}
+        <Level02 scale={0.25}  basculerActivation={basculerActivation}  />
         <Connector2to3 scale={0.25} />
 
         <Level03 scale={0.25} basculerActivation={basculerActivation} />
         <Connector3to4 scale={0.25} />
         <Level04 scale={0.25} />
 
-        {/* <Experience2 scale={0.25}/> */}
+        
 
       </group>
 
